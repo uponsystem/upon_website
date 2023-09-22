@@ -1,9 +1,9 @@
-import 'package:upon_website/ui/common/app_colors.dart';
-import 'package:upon_website/ui/common/app_constants.dart';
-import 'package:upon_website/ui/common/ui_helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../widgets/animated_text.dart';
+import '../../widgets/tab_switch.dart';
 import 'home_viewmodel.dart';
 
 class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
@@ -12,62 +12,70 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
     return Scaffold(
-      body: Center(
-        child: SizedBox(
-          width: kdDesktopMaxContentWidth,
-          height: kdDesktopMaxContentHeight,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              verticalSpaceLarge,
-              Column(
+      backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 50, top: 35, bottom: 35),
+              child: Row(
                 children: [
-                  const Text(
-                    'Hello, DESKTOP UI!',
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.w900,
+                  Image.asset('assets/logo_upon.png'),
+                  const SizedBox(width: 400),
+                  Text(
+                    'About',
+                    style: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(33, 8, 53, 3),
+                      fontSize: 25,
                     ),
                   ),
-                  verticalSpaceMedium,
-                  MaterialButton(
-                    color: Colors.black,
-                    onPressed: viewModel.incrementCounter,
-                    child: Text(
-                      viewModel.counterLabel,
-                      style: const TextStyle(color: Colors.white),
+                  const SizedBox(width: 100),
+                  Text(
+                    'Products',
+                    style: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(33, 8, 53, 3),
+                      fontSize: 25,
+                    ),
+                  ),
+                  const SizedBox(width: 100),
+                  Text(
+                    'Contact us',
+                    style: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(33, 8, 53, 3),
+                      fontSize: 25,
                     ),
                   ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  MaterialButton(
-                    color: kcDarkGreyColor,
-                    onPressed: viewModel.showDialog,
-                    child: const Text(
-                      'Show Dialog',
-                      style: TextStyle(
-                        color: Colors.white,
+            ),
+            const TabSwitch(),
+            const SizedBox(width: 100),
+            Column(
+              children: [
+                Stack(
+                  alignment: Alignment.centerLeft,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 330, top: 10),
+                      child: Image.asset(
+                        'assets/branco.png',
+                        scale: 0.8,
                       ),
                     ),
-                  ),
-                  MaterialButton(
-                    color: kcDarkGreyColor,
-                    onPressed: viewModel.showBottomSheet,
-                    child: const Text(
-                      'Show Bottom Sheet',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 200),
+                      child: AnimatedText(),
                     ),
-                  ),
-                ],
-              )
-            ],
-          ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 200, top: 250),
+                      child: onNext(0),
+                    ),
+                  ],
+                )
+              ],
+            )
+          ],
         ),
       ),
     );
