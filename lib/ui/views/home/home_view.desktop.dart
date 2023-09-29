@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 import 'package:upon_website/ui/widgets/animated_text.dart';
 
-import '../../widgets/tab_switch.dart';
 import 'home_viewmodel.dart';
 
 class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
@@ -67,7 +66,6 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                       ],
                     ),
                   ),
-                  const TabSwitch(),
                   const SizedBox(width: 100),
                   Column(
                     children: [
