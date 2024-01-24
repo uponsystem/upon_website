@@ -102,7 +102,7 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                           ),
                           const Padding(
                             padding: EdgeInsets.only(left: 200),
-                            child: AnimatedText(),
+                            child: AnimatedText(isMobile: false),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 200, top: 250),

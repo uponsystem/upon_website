@@ -8,6 +8,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../common/app_colors.dart';
 
+class AnimatedText extends StatefulWidget {
+  final bool isMobile;
+  const AnimatedText({super.key, required this.isMobile});
+
+  @override
+  State<AnimatedText> createState() => _AnimatedTextState();
+}
+
 class _AnimatedTextState extends State<AnimatedText> {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +26,7 @@ class _AnimatedTextState extends State<AnimatedText> {
           style: GoogleFonts.spaceGrotesk(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontSize: 150,
+            fontSize: widget.isMobile ? 120 : 150,
           ),
         ),
         AnimatedTextKit(
@@ -28,7 +36,7 @@ class _AnimatedTextState extends State<AnimatedText> {
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: 150,
+                fontSize: widget.isMobile ? 80 : 150,
               ),
             ),
             RotateAnimatedText(
@@ -36,7 +44,7 @@ class _AnimatedTextState extends State<AnimatedText> {
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: 150,
+                fontSize: widget.isMobile ? 80 : 150,
               ),
             ),
             RotateAnimatedText(
@@ -44,7 +52,7 @@ class _AnimatedTextState extends State<AnimatedText> {
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: 150,
+                fontSize: widget.isMobile ? 80 : 150,
               ),
             ),
           ],
@@ -59,21 +67,15 @@ class _AnimatedTextState extends State<AnimatedText> {
   }
 }
 
-class AnimatedText extends StatefulWidget {
-  const AnimatedText({super.key});
-
-  @override
-  State<AnimatedText> createState() => _AnimatedTextState();
-}
-
 onNext(int index) {
   return texts[index];
 }
 
 List texts = [
   SizedBox(
-    width: 550,
+    width: double.infinity,
     child: Text.rich(
+      textAlign: TextAlign.left,
       TextSpan(
         text: 'design, quality',
         style: GoogleFonts.spaceGrotesk(
