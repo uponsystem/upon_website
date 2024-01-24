@@ -40,27 +40,45 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                       children: [
                         Image.asset('assets/logo_upon.png'),
                         const SizedBox(width: 400),
-                        Text(
-                          'About',
-                          style: GoogleFonts.spaceGrotesk(
-                            color: const Color.fromRGBO(33, 8, 53, 3),
-                            fontSize: 25,
+                        TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(20),
+                          ),
+                          child: Text(
+                            'About',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: const Color.fromRGBO(33, 8, 53, 3),
+                              fontSize: 25,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 100),
-                        Text(
-                          'Products',
-                          style: GoogleFonts.spaceGrotesk(
-                            color: const Color.fromRGBO(33, 8, 53, 3),
-                            fontSize: 25,
+                        TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(20),
+                          ),
+                          child: Text(
+                            'Products',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: const Color.fromRGBO(33, 8, 53, 3),
+                              fontSize: 25,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 100),
-                        Text(
-                          'Contact us',
-                          style: GoogleFonts.spaceGrotesk(
-                            color: const Color.fromRGBO(33, 8, 53, 3),
-                            fontSize: 25,
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(20),
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            'Contact us',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: const Color.fromRGBO(33, 8, 53, 3),
+                              fontSize: 25,
+                            ),
                           ),
                         ),
                       ],
@@ -93,7 +111,7 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                         ],
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

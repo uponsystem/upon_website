@@ -1,6 +1,7 @@
 // ignore: depend_on_referenced_packages
 // ignore_for_file: avoid_types_as_parameter_names
 
+// ignore: depend_on_referenced_packages
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
