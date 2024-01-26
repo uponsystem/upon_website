@@ -64,9 +64,9 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             child: Text(
                               'About',
                               style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(33, 8, 53, 3),
+                                color: const Color.fromRGBO(139, 45, 190, 1),
+                                fontWeight: FontWeight.w600,
                                 fontSize: 20,
-                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -79,9 +79,9 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             child: Text(
                               'Products',
                               style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(33, 8, 53, 3),
+                                color: const Color.fromRGBO(139, 45, 190, 1),
+                                fontWeight: FontWeight.w600,
                                 fontSize: 20,
-                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -94,9 +94,9 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             child: Text(
                               'Contact us',
                               style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(33, 8, 53, 3),
+                                color: const Color.fromRGBO(139, 45, 190, 1),
+                                fontWeight: FontWeight.w600,
                                 fontSize: 20,
-                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -106,11 +106,10 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                     Column(
                       children: [
                         Stack(
-                          alignment: Alignment.centerLeft,
+                          alignment: Alignment.topCenter,
                           children: [
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 20, top: 150),
+                              padding: const EdgeInsets.only(left: 20, top: 30),
                               child: Opacity(
                                 opacity: 0.4,
                                 child: Image.asset(
@@ -120,16 +119,16 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                               ),
                             ),
                             const Padding(
-                              padding: EdgeInsets.only(left: 40),
+                              padding: EdgeInsets.only(left: 40, top: 20),
                               child: AnimatedText(isMobile: true),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 45, top: 280, right: 25),
+                                  left: 45, top: 200, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
-                                  text: 'design, quality',
+                                  text: 'Design',
                                   style: GoogleFonts.spaceGrotesk(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
@@ -144,13 +143,8 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                         fontSize: 22,
                                       ),
                                     ),
-                                    TextSpan(
-                                      text: ' reability',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22,
-                                      ),
+                                    const TextSpan(
+                                      text: ' quality',
                                     ),
                                     TextSpan(
                                       text: ' to forge digital solutions that',
@@ -164,7 +158,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       text: ' transcend expectations',
                                       style: GoogleFonts.spaceGrotesk(
                                         color: purpleBodyText,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.bold,
                                         fontSize: 22,
                                       ),
                                     ),
@@ -173,6 +167,65 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w500,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            //
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 45, top: 325, right: 25),
+                              child: Text.rich(
+                                textAlign: TextAlign.left,
+                                TextSpan(
+                                  text: 'Turning vision into ',
+                                  style: GoogleFonts.spaceGrotesk(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 22,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text: 'reality ',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: 'through bespoke ',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: 'software solutions ',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: purpleBodyText,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text:
+                                          'tailored to take your business to ',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: 'new heights.',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
                                         fontSize: 22,
                                       ),
                                     ),

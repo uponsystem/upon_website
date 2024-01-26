@@ -18,13 +18,17 @@ class _AnimatedTextState extends State<AnimatedText> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          'F',
-          style: GoogleFonts.spaceGrotesk(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: widget.isMobile ? 120 : 150,
+        Padding(
+          padding: EdgeInsets.only(bottom: widget.isMobile ? 25 : 24),
+          child: Text(
+            'F',
+            style: GoogleFonts.spaceGrotesk(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: widget.isMobile ? 120 : 180,
+            ),
           ),
         ),
         AnimatedTextKit(

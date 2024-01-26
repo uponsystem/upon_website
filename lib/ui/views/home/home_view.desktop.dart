@@ -88,7 +88,6 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                       ],
                     ),
                   ),
-                  const SizedBox(width: 100),
                   Column(
                     children: [
                       Stack(
