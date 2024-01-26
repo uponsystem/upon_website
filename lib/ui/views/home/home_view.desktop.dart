@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
+import 'package:upon_website/ui/common/app_colors.dart';
 import 'package:upon_website/ui/widgets/animated_text.dart';
 
 import 'home_viewmodel.dart';
@@ -46,9 +47,10 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                             padding: const EdgeInsets.all(20),
                           ),
                           child: Text(
-                            'About',
+                            'About Us',
                             style: GoogleFonts.spaceGrotesk(
-                              color: const Color.fromRGBO(33, 8, 53, 3),
+                              color: const Color.fromRGBO(139, 45, 190, 1),
+                              fontWeight: FontWeight.w600,
                               fontSize: 25,
                             ),
                           ),
@@ -62,7 +64,8 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                           child: Text(
                             'Products',
                             style: GoogleFonts.spaceGrotesk(
-                              color: const Color.fromRGBO(33, 8, 53, 3),
+                              color: const Color.fromRGBO(139, 45, 190, 1),
+                              fontWeight: FontWeight.w600,
                               fontSize: 25,
                             ),
                           ),
@@ -76,7 +79,8 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                           child: Text(
                             'Contact us',
                             style: GoogleFonts.spaceGrotesk(
-                              color: const Color.fromRGBO(33, 8, 53, 3),
+                              color: const Color.fromRGBO(139, 45, 190, 1),
+                              fontWeight: FontWeight.w600,
                               fontSize: 25,
                             ),
                           ),
@@ -105,8 +109,115 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                             child: AnimatedText(isMobile: false),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 200, top: 250),
-                            child: onNext(0),
+                            padding: const EdgeInsets.only(left: 200, top: 280),
+                            child: Text.rich(
+                              textAlign: TextAlign.left,
+                              TextSpan(
+                                text: 'Design',
+                                style: GoogleFonts.spaceGrotesk(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' and',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: ' quality',
+                                  ),
+                                  TextSpan(
+                                    text: ' to forge digital solutions that',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: ' transcend expectations',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: purpleBodyText,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '.',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 200,
+                              top: 390,
+                              right: 600,
+                            ),
+                            child: Text.rich(
+                              textAlign: TextAlign.left,
+                              TextSpan(
+                                text: 'Turning vision into ',
+                                style: GoogleFonts.spaceGrotesk(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 22,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'reality ',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'through bespoke ',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'software solutions ',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: purpleBodyText,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'tailored to take your business to ',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'new heights.',
+                                    style: GoogleFonts.spaceGrotesk(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                         ],
                       )

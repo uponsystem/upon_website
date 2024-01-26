@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
+import 'package:upon_website/ui/common/app_colors.dart';
 import 'package:upon_website/ui/widgets/animated_text.dart';
 
 import 'home_viewmodel.dart';
@@ -125,7 +126,59 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             Padding(
                               padding: const EdgeInsets.only(
                                   left: 45, top: 280, right: 25),
-                              child: onNext(0),
+                              child: Text.rich(
+                                textAlign: TextAlign.left,
+                                TextSpan(
+                                  text: 'design, quality',
+                                  style: GoogleFonts.spaceGrotesk(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text: ' and',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ' reability',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ' to forge digital solutions that',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ' transcend expectations',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: purpleBodyText,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: '.',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ],
                         )
