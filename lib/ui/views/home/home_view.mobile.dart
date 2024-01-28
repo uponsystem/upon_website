@@ -24,7 +24,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 30),
+            padding: const EdgeInsets.only(left: 30, top: 25),
             child: Image.asset(
               'assets/logo_upon.png',
               height: 140,
@@ -33,10 +33,10 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
           ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 130,
+              top: 160,
               bottom: 50,
-              right: 30,
-              left: 30,
+              right: 20,
+              left: 20,
             ),
             child: Material(
               color: Colors.white.withOpacity(0.5),
@@ -50,9 +50,9 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                 height: MediaQuery.of(context).size.height,
                 child: Column(
                   children: [
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 20),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      padding: const EdgeInsets.symmetric(horizontal: 3),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -66,11 +66,10 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                               style: GoogleFonts.spaceGrotesk(
                                 color: const Color.fromRGBO(139, 45, 190, 1),
                                 fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                                fontSize: 15,
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20),
                           TextButton(
                             onPressed: () {},
                             style: TextButton.styleFrom(
@@ -81,11 +80,10 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                               style: GoogleFonts.spaceGrotesk(
                                 color: const Color.fromRGBO(139, 45, 190, 1),
                                 fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                                fontSize: 15,
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20),
                           TextButton(
                             style: TextButton.styleFrom(
                               padding: const EdgeInsets.all(20),
@@ -96,7 +94,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                               style: GoogleFonts.spaceGrotesk(
                                 color: const Color.fromRGBO(139, 45, 190, 1),
                                 fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                                fontSize: 15,
                               ),
                             ),
                           ),
@@ -119,12 +117,12 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                               ),
                             ),
                             const Padding(
-                              padding: EdgeInsets.only(left: 40, top: 20),
+                              padding: EdgeInsets.only(left: 30, top: 15),
                               child: AnimatedText(isMobile: true),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 45, top: 200, right: 25),
+                                  left: 30, top: 160, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
@@ -132,7 +130,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                   style: GoogleFonts.spaceGrotesk(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 22,
+                                    fontSize: 20,
                                   ),
                                   children: [
                                     TextSpan(
@@ -140,7 +138,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     const TextSpan(
@@ -151,7 +149,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     TextSpan(
@@ -159,7 +157,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: purpleBodyText,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     TextSpan(
@@ -167,7 +165,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                   ],
@@ -177,7 +175,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             //
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 45, top: 325, right: 25),
+                                  left: 30, top: 300, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
@@ -185,7 +183,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                   style: GoogleFonts.spaceGrotesk(
                                     color: Colors.black,
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 22,
+                                    fontSize: 20,
                                   ),
                                   children: [
                                     TextSpan(
@@ -193,7 +191,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     TextSpan(
@@ -201,7 +199,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     TextSpan(
@@ -209,7 +207,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: purpleBodyText,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     TextSpan(
@@ -218,7 +216,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                     TextSpan(
@@ -226,7 +224,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 22,
+                                        fontSize: 20,
                                       ),
                                     ),
                                   ],

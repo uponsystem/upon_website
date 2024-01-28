@@ -27,7 +27,7 @@ class _AnimatedTextState extends State<AnimatedText> {
             style: GoogleFonts.spaceGrotesk(
               color: Colors.black,
               fontWeight: FontWeight.bold,
-              fontSize: widget.isMobile ? 120 : 180,
+              fontSize: widget.isMobile ? 90 : 180,
             ),
           ),
         ),
@@ -38,7 +38,7 @@ class _AnimatedTextState extends State<AnimatedText> {
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 80 : 150,
+                fontSize: widget.isMobile ? 50 : 150,
               ),
             ),
             TypewriterAnimatedText(
@@ -46,7 +46,7 @@ class _AnimatedTextState extends State<AnimatedText> {
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 80 : 150,
+                fontSize: widget.isMobile ? 50 : 150,
               ),
             ),
             TypewriterAnimatedText(
@@ -54,7 +54,7 @@ class _AnimatedTextState extends State<AnimatedText> {
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 80 : 150,
+                fontSize: widget.isMobile ? 50 : 150,
               ),
             ),
           ],
