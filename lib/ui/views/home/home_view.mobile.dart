@@ -24,7 +24,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 30, top: 25),
+            padding: const EdgeInsets.only(left: 30, top: 10),
             child: Image.asset(
               'assets/logo_upon.png',
               height: 140,
@@ -33,7 +33,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
           ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 160,
+              top: 135,
               bottom: 50,
               right: 20,
               left: 20,
@@ -117,12 +117,12 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                               ),
                             ),
                             const Padding(
-                              padding: EdgeInsets.only(left: 30, top: 15),
+                              padding: EdgeInsets.only(left: 30, top: 0),
                               child: AnimatedText(isMobile: true),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 30, top: 160, right: 25),
+                                  left: 30, top: 140, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
@@ -175,7 +175,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             //
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 30, top: 300, right: 25),
+                                  left: 30, top: 280, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
