@@ -1,6 +1,6 @@
 {
-    "name": "upon_website",
-    "short_name": "upon_website",
+    "name": "upon_site",
+    "short_name": "upon_site",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
