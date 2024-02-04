@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
       body: Stack(
@@ -19,9 +20,12 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: Image.asset(
-              'assets/background_gradient.png',
-              fit: BoxFit.cover,
+            child: GestureDetector(
+              onTap: () => print(size),
+              child: Image.asset(
+                'assets/background_gradient.png',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Padding(
@@ -43,7 +47,9 @@ class _HomePageState extends State<HomePage> {
                         Image.asset('assets/logo_upon.png'),
                         const SizedBox(width: 400),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            print(size);
+                          },
                           style: TextButton.styleFrom(
                             padding: const EdgeInsets.all(20),
                           ),
