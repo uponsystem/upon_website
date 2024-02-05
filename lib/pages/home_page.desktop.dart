@@ -12,7 +12,6 @@ class HomePageDesktop extends StatefulWidget {
 class _HomePageDesktopState extends State<HomePageDesktop> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
       body: Stack(
@@ -20,12 +19,9 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
           SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: GestureDetector(
-              onTap: () => print(size),
-              child: Image.asset(
-                'assets/background_gradient.png',
-                fit: BoxFit.cover,
-              ),
+            child: Image.asset(
+              'assets/background_gradient.png',
+              fit: BoxFit.cover,
             ),
           ),
           Padding(
@@ -47,9 +43,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                         Image.asset('assets/logo_upon.png'),
                         const SizedBox(width: 400),
                         TextButton(
-                          onPressed: () {
-                            print(size);
-                          },
+                          onPressed: () {},
                           style: TextButton.styleFrom(
                             padding: const EdgeInsets.all(20),
                           ),

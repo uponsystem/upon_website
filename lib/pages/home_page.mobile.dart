@@ -25,7 +25,9 @@ class _HomePageMobileState extends State<HomePageMobile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 30, top: 10),
+            padding: const EdgeInsets.only(
+              left: 30,
+            ),
             child: Image.asset(
               'assets/logo_upon.png',
               height: 140,
@@ -34,7 +36,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
           ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 135,
+              top: 125,
               bottom: 50,
               right: 20,
               left: 20,
@@ -53,50 +55,33 @@ class _HomePageMobileState extends State<HomePageMobile> {
                   children: [
                     const SizedBox(height: 20),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 3),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 5, vertical: 8),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          TextButton(
-                            onPressed: () {},
-                            style: TextButton.styleFrom(
-                              padding: const EdgeInsets.all(20),
-                            ),
-                            child: Text(
-                              'About',
-                              style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(139, 45, 190, 1),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                              ),
+                          Text(
+                            'About Us',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: const Color.fromRGBO(139, 45, 190, 1),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 19,
                             ),
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            style: TextButton.styleFrom(
-                              padding: const EdgeInsets.all(20),
-                            ),
-                            child: Text(
-                              'Products',
-                              style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(139, 45, 190, 1),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                              ),
+                          Text(
+                            'Products',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: const Color.fromRGBO(139, 45, 190, 1),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 19,
                             ),
                           ),
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              padding: const EdgeInsets.all(20),
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'Contact us',
-                              style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(139, 45, 190, 1),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                              ),
+                          Text(
+                            'Contact us',
+                            style: GoogleFonts.spaceGrotesk(
+                              color: const Color.fromRGBO(139, 45, 190, 1),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 19,
                             ),
                           ),
                         ],
@@ -176,7 +161,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                             //
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 30, top: 280, right: 25),
+                                  left: 30, top: 260, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
