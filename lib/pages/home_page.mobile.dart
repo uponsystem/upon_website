@@ -12,8 +12,8 @@ class HomePageMobile extends StatefulWidget {
 class _HomePageMobileState extends State<HomePageMobile> {
   @override
   Widget build(BuildContext context) {
+    final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
       body: Stack(
         children: [
           SizedBox(
@@ -25,7 +25,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: Material(
               color: Colors.white.withOpacity(0.5),
               borderRadius: BorderRadius.circular(30),
@@ -41,50 +41,86 @@ class _HomePageMobileState extends State<HomePageMobile> {
                     const SizedBox(height: 35),
                     Image.asset(
                       'assets/logo_upon.png',
+                      width: 160,
                     ),
                     const SizedBox(height: 35),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'About Us',
-                              style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(139, 45, 190, 1),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Products',
-                              style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(139, 45, 190, 1),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Contact us',
-                              style: GoogleFonts.spaceGrotesk(
-                                color: const Color.fromRGBO(139, 45, 190, 1),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        child: deviceWidth > 355
+                            ? Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  GestureDetector(
+                                    child: Text(
+                                      'About Us',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: const Color.fromRGBO(139, 45, 190, 1),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  GestureDetector(
+                                    child: Text(
+                                      'Products',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: const Color.fromRGBO(139, 45, 190, 1),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  GestureDetector(
+                                    child: Text(
+                                      'Contact us',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: const Color.fromRGBO(139, 45, 190, 1),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
+                            : Column(
+                                children: [
+                                  GestureDetector(
+                                    child: Text(
+                                      'About Us',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: const Color.fromRGBO(139, 45, 190, 1),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 10),
+                                  GestureDetector(
+                                    child: Text(
+                                      'Products',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: const Color.fromRGBO(139, 45, 190, 1),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 10),
+                                  GestureDetector(
+                                    child: Text(
+                                      'Contact us',
+                                      style: GoogleFonts.spaceGrotesk(
+                                        color: const Color.fromRGBO(139, 45, 190, 1),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )),
+                    const SizedBox(height: 10),
                     Column(
                       children: [
                         Stack(
