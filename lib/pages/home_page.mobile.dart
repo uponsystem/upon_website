@@ -25,22 +25,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(
-              left: 30,
-            ),
-            child: Image.asset(
-              'assets/logo_upon.png',
-              height: 140,
-              width: 150,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 125,
-              bottom: 50,
-              right: 20,
-              left: 20,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
             child: Material(
               color: Colors.white.withOpacity(0.5),
               borderRadius: BorderRadius.circular(30),
@@ -53,40 +38,53 @@ class _HomePageMobileState extends State<HomePageMobile> {
                 height: MediaQuery.of(context).size.height,
                 child: Column(
                   children: [
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 35),
+                    Image.asset(
+                      'assets/logo_upon.png',
+                    ),
+                    const SizedBox(height: 35),
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 5, vertical: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text(
-                            'About Us',
-                            style: GoogleFonts.spaceGrotesk(
-                              color: const Color.fromRGBO(139, 45, 190, 1),
-                              fontWeight: FontWeight.w600,
-                              fontSize: 19,
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'About Us',
+                              style: GoogleFonts.spaceGrotesk(
+                                color: const Color.fromRGBO(139, 45, 190, 1),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
-                          Text(
-                            'Products',
-                            style: GoogleFonts.spaceGrotesk(
-                              color: const Color.fromRGBO(139, 45, 190, 1),
-                              fontWeight: FontWeight.w600,
-                              fontSize: 19,
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Products',
+                              style: GoogleFonts.spaceGrotesk(
+                                color: const Color.fromRGBO(139, 45, 190, 1),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
-                          Text(
-                            'Contact us',
-                            style: GoogleFonts.spaceGrotesk(
-                              color: const Color.fromRGBO(139, 45, 190, 1),
-                              fontWeight: FontWeight.w600,
-                              fontSize: 19,
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Contact us',
+                              style: GoogleFonts.spaceGrotesk(
+                                color: const Color.fromRGBO(139, 45, 190, 1),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
+                    const SizedBox(height: 20),
                     Column(
                       children: [
                         Stack(
@@ -107,8 +105,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                               child: AnimatedText(isMobile: true),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 30, top: 140, right: 25),
+                              padding: const EdgeInsets.only(left: 30, top: 140, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
@@ -160,8 +157,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                             ),
                             //
                             Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 30, top: 260, right: 25),
+                              padding: const EdgeInsets.only(left: 30, top: 260, right: 25),
                               child: Text.rich(
                                 textAlign: TextAlign.left,
                                 TextSpan(
@@ -197,8 +193,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                                       ),
                                     ),
                                     TextSpan(
-                                      text:
-                                          'tailored to take your business to ',
+                                      text: 'tailored to take your business to ',
                                       style: GoogleFonts.spaceGrotesk(
                                         color: Colors.black,
                                         fontWeight: FontWeight.normal,
