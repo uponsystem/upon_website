@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:upon_site/pages/about_us_page.dart';
 import 'package:upon_site/widgets/animated_text.dart';
 
 class HomePageDesktop extends StatefulWidget {
@@ -41,7 +43,9 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                           Image.asset('assets/logo_upon.png'),
                           const SizedBox(width: 400),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: const AboutUsPage()));
+                            },
                             style: TextButton.styleFrom(
                               padding: const EdgeInsets.all(20),
                             ),

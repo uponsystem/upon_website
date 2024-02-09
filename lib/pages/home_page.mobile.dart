@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:upon_site/pages/about_us_page.dart';
 import 'package:upon_site/widgets/animated_text.dart';
 
 class HomePageMobile extends StatefulWidget {
@@ -51,6 +53,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   GestureDetector(
+                                    onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: const AboutUsPage())),
                                     child: Text(
                                       'About Us',
                                       style: GoogleFonts.spaceGrotesk(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:upon_site/utils/routes.dart';
+import 'package:upon_site/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Upon Systems',
-      routes: routes,
-      initialRoute: '/HomePage',
+      home: HomePage(),
     );
   }
 }
