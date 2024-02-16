@@ -87,41 +87,44 @@ class _HomePageMobileState extends State<HomePageMobile> {
                                   ),
                                 ],
                               )
-                            : Column(
-                                children: [
-                                  GestureDetector(
-                                    child: Text(
-                                      'About Us',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                            : Center(
+                                child: Column(
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: const AboutUsPage())),
+                                      child: Text(
+                                        'About Us',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  GestureDetector(
-                                    child: Text(
-                                      'Products',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                    const SizedBox(height: 10),
+                                    GestureDetector(
+                                      child: Text(
+                                        'Products',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  GestureDetector(
-                                    child: Text(
-                                      'Contact us',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                    const SizedBox(height: 10),
+                                    GestureDetector(
+                                      child: Text(
+                                        'Contact us',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               )),
                     const SizedBox(height: 10),
                     Column(
