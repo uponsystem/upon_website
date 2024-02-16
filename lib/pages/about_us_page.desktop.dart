@@ -193,7 +193,7 @@ class _AboutUsPageDesktopState extends State<AboutUsPageDesktop> {
                         child: SizedBox(
                           width: 1200,
                           height: 270,
-                          child: CarouselWithIndicatorDemo(),
+                          child: FoundersCarousel(isMobile: false),
                         ),
                       ),
                     ),

@@ -2,8 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:upon_site/widgets/founders_tile.dart';
 
-class CarouselWithIndicatorDemo extends StatefulWidget {
-  const CarouselWithIndicatorDemo({super.key});
+class FoundersCarousel extends StatefulWidget {
+  final bool isMobile;
+  const FoundersCarousel({super.key, required this.isMobile});
 
   @override
   State<StatefulWidget> createState() {
@@ -11,7 +12,7 @@ class CarouselWithIndicatorDemo extends StatefulWidget {
   }
 }
 
-class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
+class _CarouselWithIndicatorState extends State<FoundersCarousel> {
   int _current = 0;
   final CarouselController _controller = CarouselController();
   final imgList = ['uno', 'dos', 'tres', 'quatro'];
@@ -20,26 +21,30 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
     return Column(children: [
       Expanded(
         child: CarouselSlider(
-          items: const [
+          items: [
             FoundersTile(
+              isMobile: widget.isMobile,
               imageAsset: 'assets/chico.png',
               founderName: 'Francisco Gabriel',
               founderDescription:
                   'Experienced mobile developer with years of practice,\nhis linguistic ability and solid technical knowledge make\nhim a valuable asset to Upon, contributing to innovation\nand efficiency in each project.',
             ),
             FoundersTile(
+              isMobile: widget.isMobile,
               imageAsset: 'assets/raffa.png',
               founderName: 'Raffaela de Castro',
               founderDescription:
                   'Computer engineer from Universidade Ceuma and mobile developer\nwith more than 3 years of experience. His ability to create exceptional\nmobile solutions contributes significantly to Upon progressive vision,\nleading the development of exceptional digital experiences.',
             ),
             FoundersTile(
+              isMobile: widget.isMobile,
               imageAsset: 'assets/dantas.png',
-              founderName: 'Emmanuel Dantas',
+              founderName: 'Emmanoel Dantas',
               founderDescription:
                   'Computer engineer from Universidade Ceuma with more than \n3 years of experience, he is a dedicated member of Upon.\nHis solid academic background and commitment to excellence \nhighlight him as a key player in the development of innovative\ndigital solutions.',
             ),
             FoundersTile(
+              isMobile: widget.isMobile,
               imageAsset: 'assets/guilherme.png',
               founderName: 'Guilherme Beckham',
               founderDescription:
@@ -48,10 +53,11 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
           ],
           carouselController: _controller,
           options: CarouselOptions(
-            autoPlay: false,
-            height: 380,
+            autoPlay: true,
+            autoPlayInterval: Duration(seconds: widget.isMobile ? 2 : 6),
+            autoPlayAnimationDuration: const Duration(seconds: 2),
+            height: 260,
             viewportFraction: 1,
-            autoPlayAnimationDuration: const Duration(seconds: 5),
             onPageChanged: (index, reason) {
               setState(() {
                 _current = index;

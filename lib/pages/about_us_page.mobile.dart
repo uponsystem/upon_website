@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:upon_site/pages/home_page.dart';
 import 'package:upon_site/utils/const_colors.dart';
+import 'package:upon_site/widgets/carousel_founders.dart';
 
 class AboutUsPageMobile extends StatefulWidget {
   const AboutUsPageMobile({super.key});
@@ -34,115 +35,115 @@ class _AboutUsPageMobileState extends State<AboutUsPageMobile> {
                   color: Colors.white.withOpacity(0.6),
                   borderRadius: BorderRadius.circular(55),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 35),
-                    Center(
-                      child: GestureDetector(
-                        onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: const HomePage())),
-                        child: Image.asset(
-                          'assets/logo_upon.png',
-                          width: 160,
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 35),
+                      Center(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: const HomePage())),
+                          child: Image.asset(
+                            'assets/logo_upon.png',
+                            width: 160,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 20),
-                    Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-                        child: deviceWidth > 355
-                            ? Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  GestureDetector(
-                                    child: Text(
-                                      'About Us',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                      const SizedBox(height: 35),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                          child: deviceWidth > 355
+                              ? Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    GestureDetector(
+                                      child: Text(
+                                        'About Us',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(width: 10),
-                                  GestureDetector(
-                                    child: Text(
-                                      'Products',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                    const SizedBox(width: 10),
+                                    GestureDetector(
+                                      child: Text(
+                                        'Products',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(width: 10),
-                                  GestureDetector(
-                                    child: Text(
-                                      'Contact us',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                    const SizedBox(width: 10),
+                                    GestureDetector(
+                                      child: Text(
+                                        'Contact us',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              )
-                            : Column(
-                                children: [
-                                  GestureDetector(
-                                    child: Text(
-                                      'About Us',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                  ],
+                                )
+                              : Column(
+                                  children: [
+                                    GestureDetector(
+                                      child: Text(
+                                        'About Us',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  GestureDetector(
-                                    child: Text(
-                                      'Products',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                    const SizedBox(height: 10),
+                                    GestureDetector(
+                                      child: Text(
+                                        'Products',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  GestureDetector(
-                                    child: Text(
-                                      'Contact us',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: const Color.fromRGBO(139, 45, 190, 1),
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18,
+                                    const SizedBox(height: 10),
+                                    GestureDetector(
+                                      child: Text(
+                                        'Contact us',
+                                        style: GoogleFonts.spaceGrotesk(
+                                          color: const Color.fromRGBO(139, 45, 190, 1),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              )),
-                    const SizedBox(height: 10),
-                    Center(
-                      child: Image.asset(
-                        'assets/logo_reduzida_upon.png',
-                        width: 140,
-                        height: 140,
+                                  ],
+                                )),
+                      const SizedBox(height: 25),
+                      Center(
+                        child: Image.asset(
+                          'assets/logo_reduzida_upon.png',
+                          width: 150,
+                          height: 150,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: SingleChildScrollView(
+                      const SizedBox(height: 30),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
                               width: deviceWidth,
                               child: Text.rich(
-                                textAlign: TextAlign.left,
+                                textAlign: TextAlign.justify,
                                 TextSpan(
                                   text: 'Founded by software engineers from São Luís.',
                                   style: GoogleFonts.spaceGrotesk(
@@ -179,52 +180,36 @@ class _AboutUsPageMobileState extends State<AboutUsPageMobile> {
                                         height: 1.9,
                                       ),
                                     ),
-                                    /*          TextSpan(
-                                      text:
-                                          'As a beacon of innovation, we strive to blend tradition and modernity, providing unique digital experiences that transcend temporal boundaries.',
-                                      style: GoogleFonts.spaceGrotesk(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                        height: 1.9,
-                                      ),
-                                    ), */
                                   ],
                                 ),
                               ),
                             ),
-                            const SizedBox(width: 140),
                           ],
                         ),
                       ),
-                    ),
-                    //
-                    //
-                    const SizedBox(height: 40),
-                    /* Center(
-                      child: Text(
-                        'Founders of Upon',
-                        style: GoogleFonts.spaceGrotesk(
-                          color: strongPurple,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 50,
+                      //
+
+                      Center(
+                        child: Text(
+                          'Founders of Upon',
+                          style: GoogleFonts.spaceGrotesk(
+                            color: strongPurple,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 35,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 20),
-                    //
-                    //
-                    const Center(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 200),
+                      const SizedBox(height: 20),
+                      const Center(
                         child: SizedBox(
-                          width: 1200,
-                          height: 270,
-                          child: CarouselWithIndicatorDemo(),
+                          width: double.infinity,
+                          height: 350,
+                          child: FoundersCarousel(isMobile: true),
                         ),
                       ),
-                    ), */
-                  ],
+                      const SizedBox(height: 20),
+                    ],
+                  ),
                 ),
               ),
             ),
