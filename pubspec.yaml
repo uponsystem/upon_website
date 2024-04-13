@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.1.1+1
-  flutter_native_splash: ^2.3.11
+  flutter_native_splash: ^2.4.0
   flutter_svg: ^2.0.7
   google_fonts: ^6.1.0
   page_transition: ^2.1.0
@@ -39,5 +39,5 @@ flutter:
 
 flutter_native_splash:
   
-  image: assets/logo_u.png
+  image_web: assets/test_gif.gif
   background_image: "assets/background_gradient.png"
