@@ -17,49 +17,90 @@ class AnimatedText extends StatefulWidget {
 class _AnimatedTextState extends State<AnimatedText> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.only(bottom: widget.isMobile ? 25 : 24),
-          child: Text(
-            'F',
-            style: GoogleFonts.spaceGrotesk(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: widget.isMobile ? 90 : 180,
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(bottom: widget.isMobile ? 25 : 24),
+              child: Text(
+                'F',
+                style: GoogleFonts.spaceGrotesk(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: widget.isMobile ? 90 : 180,
+                ),
+              ),
             ),
-          ),
+            AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'using',
+                  textStyle: GoogleFonts.spaceGrotesk(
+                    color: const Color.fromRGBO(139, 45, 190, 1),
+                    fontWeight: FontWeight.bold,
+                    fontSize: widget.isMobile ? 50 : 150,
+                  ),
+                ),
+                TypewriterAnimatedText(
+                  'rom',
+                  textStyle: GoogleFonts.spaceGrotesk(
+                    color: const Color.fromRGBO(139, 45, 190, 1),
+                    fontWeight: FontWeight.bold,
+                    fontSize: widget.isMobile ? 50 : 150,
+                  ),
+                ),
+                TypewriterAnimatedText(
+                  'ounded',
+                  textStyle: GoogleFonts.spaceGrotesk(
+                    color: const Color.fromRGBO(139, 45, 190, 1),
+                    fontWeight: FontWeight.bold,
+                    fontSize: widget.isMobile ? 50 : 150,
+                  ),
+                ),
+              ],
+              repeatForever: true,
+              pause: const Duration(milliseconds: 7000),
+              onNext: (p0, p1) {
+                setState(() {});
+              },
+            ),
+          ],
         ),
+        //
+        //
+        //
         AnimatedTextKit(
           animatedTexts: [
             TypewriterAnimatedText(
-              'oudend',
+              'Design, qualidade e confiabilidade para criar soluções digitais \nque transcendem as expectativas.',
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 50 : 150,
+                fontSize: widget.isMobile ? 50 : 20,
               ),
             ),
             TypewriterAnimatedText(
-              'rom',
+              'Somos uma software house Ludovicense, especializada na criação de aplicativos e plataformas \nque elevam a experiência digital.',
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 50 : 150,
+                fontSize: widget.isMobile ? 50 : 20,
               ),
             ),
             TypewriterAnimatedText(
-              'using',
+              'Upon homenageia a história de São Luís, terra natal dos fundadores.\nO Tupi-Guarani Upaon-Açu nome dado à ilha de São Luís pelos indígenas.',
               textStyle: GoogleFonts.spaceGrotesk(
                 color: const Color.fromRGBO(139, 45, 190, 1),
                 fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 50 : 150,
+                fontSize: widget.isMobile ? 50 : 20,
               ),
             ),
           ],
           repeatForever: true,
-          pause: const Duration(milliseconds: 1000),
+          pause: const Duration(milliseconds: 4000),
           onNext: (p0, p1) {
             setState(() {});
           },
