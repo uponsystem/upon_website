@@ -30,7 +30,7 @@ class _AnimatedTextState extends State<AnimatedText> {
                 style: GoogleFonts.spaceGrotesk(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: widget.isMobile ? 90 : 180,
+                  fontSize: widget.isMobile ? 110 : 180,
                 ),
               ),
             ),
@@ -41,7 +41,7 @@ class _AnimatedTextState extends State<AnimatedText> {
                   textStyle: GoogleFonts.spaceGrotesk(
                     color: const Color.fromRGBO(139, 45, 190, 1),
                     fontWeight: FontWeight.bold,
-                    fontSize: widget.isMobile ? 50 : 150,
+                    fontSize: widget.isMobile ? 70 : 150,
                   ),
                 ),
                 TypewriterAnimatedText(
@@ -49,7 +49,7 @@ class _AnimatedTextState extends State<AnimatedText> {
                   textStyle: GoogleFonts.spaceGrotesk(
                     color: const Color.fromRGBO(139, 45, 190, 1),
                     fontWeight: FontWeight.bold,
-                    fontSize: widget.isMobile ? 50 : 150,
+                    fontSize: widget.isMobile ? 70 : 150,
                   ),
                 ),
                 TypewriterAnimatedText(
@@ -57,7 +57,7 @@ class _AnimatedTextState extends State<AnimatedText> {
                   textStyle: GoogleFonts.spaceGrotesk(
                     color: const Color.fromRGBO(139, 45, 190, 1),
                     fontWeight: FontWeight.bold,
-                    fontSize: widget.isMobile ? 50 : 150,
+                    fontSize: widget.isMobile ? 68 : 150,
                   ),
                 ),
               ],
@@ -72,39 +72,73 @@ class _AnimatedTextState extends State<AnimatedText> {
         //
         //
         //
-        AnimatedTextKit(
-          animatedTexts: [
-            TypewriterAnimatedText(
-              'Design, qualidade e confiabilidade para criar soluções digitais \nque transcendem as expectativas.',
-              textStyle: GoogleFonts.spaceGrotesk(
-                color: const Color.fromRGBO(139, 45, 190, 1),
-                fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 50 : 20,
+        widget.isMobile
+            ? AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Design, qualidade e confiabilidade para criar soluções digitais que\ntranscendem as expectativas.',
+                    textStyle: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(139, 45, 190, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  TypewriterAnimatedText(
+                    'Somos uma software house Ludovicense, especializada na criação de aplicativos que \nelevam a experiência digital.',
+                    textStyle: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(139, 45, 190, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  TypewriterAnimatedText(
+                    'Upon homenageia a história de São Luís, terra natal dos fundadores.\nO Tupi-Guarani Upaon-Açu nome dado à ilha de São Luís pelos indígenas.',
+                    textStyle: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(139, 45, 190, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+                repeatForever: true,
+                pause: const Duration(milliseconds: 4000),
+                onNext: (p0, p1) {
+                  setState(() {});
+                },
+              )
+            : AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Design, qualidade e confiabilidade para criar soluções digitais \nque transcendem as expectativas.',
+                    textStyle: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(139, 45, 190, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  TypewriterAnimatedText(
+                    'Somos uma software house Ludovicense, especializada na criação de aplicativos e plataformas \nque elevam a experiência digital.',
+                    textStyle: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(139, 45, 190, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  TypewriterAnimatedText(
+                    'Upon homenageia a história de São Luís, terra natal dos fundadores.\nO Tupi-Guarani Upaon-Açu nome dado à ilha de São Luís pelos indígenas.',
+                    textStyle: GoogleFonts.spaceGrotesk(
+                      color: const Color.fromRGBO(139, 45, 190, 1),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+                repeatForever: true,
+                pause: const Duration(milliseconds: 4000),
+                onNext: (p0, p1) {
+                  setState(() {});
+                },
               ),
-            ),
-            TypewriterAnimatedText(
-              'Somos uma software house Ludovicense, especializada na criação de aplicativos e plataformas \nque elevam a experiência digital.',
-              textStyle: GoogleFonts.spaceGrotesk(
-                color: const Color.fromRGBO(139, 45, 190, 1),
-                fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 50 : 20,
-              ),
-            ),
-            TypewriterAnimatedText(
-              'Upon homenageia a história de São Luís, terra natal dos fundadores.\nO Tupi-Guarani Upaon-Açu nome dado à ilha de São Luís pelos indígenas.',
-              textStyle: GoogleFonts.spaceGrotesk(
-                color: const Color.fromRGBO(139, 45, 190, 1),
-                fontWeight: FontWeight.bold,
-                fontSize: widget.isMobile ? 50 : 20,
-              ),
-            ),
-          ],
-          repeatForever: true,
-          pause: const Duration(milliseconds: 4000),
-          onNext: (p0, p1) {
-            setState(() {});
-          },
-        ),
       ],
     );
   }
