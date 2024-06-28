@@ -89,12 +89,12 @@ class _NavBarState extends State<NavBar> {
               });
             },
             onPressed: () {
-              Navigator.push(
+/*               Navigator.push(
                   context,
                   PageTransition(
                     type: PageTransitionType.fade,
                     child: const AboutUsPage(),
-                  ));
+                  )); */
             },
             style: TextButton.styleFrom(
               padding: const EdgeInsets.all(20),
